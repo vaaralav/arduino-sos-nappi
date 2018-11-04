@@ -18,7 +18,6 @@ const int KIRJAIN_TAUON_KESTO = 3 * PISTEEN_KESTO;
 const int SANA_TAUON_KESTO = 7 * PISTEEN_KESTO;
 
 void setup() {
-  Serial.begin(9600);
   pinMode(LED_BUILTIN, OUTPUT);
   pinMode(NAPPI, INPUT_PULLUP);
 }
@@ -68,7 +67,6 @@ void viiva() {
 }
 
 bool onko_nappia_painettu() {
-  Serial.println(digitalRead(NAPPI));
   return digitalRead(NAPPI) == LOW; // Sisäinen pull-up vastus käytössä
 }
 
